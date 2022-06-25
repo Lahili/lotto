@@ -22,7 +22,7 @@ class ResultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     getLottoNum();
     return Scaffold(
-      appBar: AppBar(title: const Text('아무도 알려주지 마라')),
+      appBar: AppBar(title: const Text('너만 몰래 봐라')),
       body: Column(
         children: [
           const SizedBox(height: 100),
@@ -46,7 +46,8 @@ class ResultPage extends StatelessWidget {
         child: SizedBox(
           height: 60,
           child: GestureDetector(
-            onTap: () {Navigator.push(
+            onTap: () {
+              Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => MyApp(),
