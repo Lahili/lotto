@@ -10,9 +10,9 @@ class ResultPage extends StatelessWidget {
   getLottoNum() {
     Random random = Random();
     while (lottoNumList.length < 6) {
-      int random_number = 1 + random.nextInt(45);
-      if (!lottoNumList.contains(random_number)) {
-        lottoNumList.add(random_number);
+      int randomNumber = 1 + random.nextInt(45);
+      if (!lottoNumList.contains(randomNumber)) {
+        lottoNumList.add(randomNumber);
         //print(lottoNumList);
       }
     }
@@ -29,14 +29,14 @@ class ResultPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              SizedBox(width: 20),
+              const SizedBox(width: 20),
               LottoBall(lottoNumList: lottoNumList, ballNum: 0),
               LottoBall(lottoNumList: lottoNumList, ballNum: 1),
               LottoBall(lottoNumList: lottoNumList, ballNum: 2),
               LottoBall(lottoNumList: lottoNumList, ballNum: 3),
               LottoBall(lottoNumList: lottoNumList, ballNum: 4),
               LottoBall(lottoNumList: lottoNumList, ballNum: 5),
-              SizedBox(width: 20)
+              const SizedBox(width: 20)
             ],
           ),
         ],
@@ -50,10 +50,10 @@ class ResultPage extends StatelessWidget {
               Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => MyApp(),
+                builder: (context) => const MyApp(),
               ),
             );},
-            child: const Center(child: Text('다른거도 궁금하지? 눌러라',style: TextStyle(fontSize: 20,color: Colors.white))),
+            child: const Center(child: Text('딴거도 해보고 싶지? 눌러라',style: TextStyle(fontSize: 20,color: Colors.white))),
           ),
         ),
       ),
